@@ -50,8 +50,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Select hand configuration (ahora el master es la izquierda)*/
 
-//define MASTER_LEFT
-#define MASTER_RIGHT
-#define EE_HANDS
+#define MASTER_LEFT
+//#define MASTER_RIGHT
+//#define EE_HANDS
 
 #define USE_SERIAL_PD2

@@ -20,4 +20,4 @@ DYNAMIC_MACRO_ENABLE = yes # enable dynamic macro
 # VIRTSER_ENABLE = yes # required for TX Bolt
 
 
-LTO_ENABLE = yes    #HACER MAS LIVIANO EL ARCHIVOO
+#LTO_ENABLE = yes    #HACER MAS LIVIANO EL ARCHIVOO
