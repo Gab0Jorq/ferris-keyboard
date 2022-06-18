@@ -46,7 +46,6 @@ enum {
 qk_tap_dance_action_t tap_dance_actions[] = {
     // Tap once for , and twice for ;
     [TD_COMM_SCLN] = ACTION_TAP_DANCE_DOUBLE(KC_COMM, KC_SCLN),
-    [TD_ESC_RESET] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, RESET),
     [TD_SLSH_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_SLSH, KC_ESC),
     [TD_Q_TAB] = ACTION_TAP_DANCE_DOUBLE(KC_Q, KC_TAB)
 };
