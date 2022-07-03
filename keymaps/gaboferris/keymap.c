@@ -31,8 +31,8 @@ enum custom_keycodes {
   EDIT,
   NAV,
   FN,
-  QWERTY,
-  DOFUS
+  HOMOLOGO, 
+  CREATE_TB
 };
 
 // For Tap Dance
@@ -50,6 +50,37 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [TD_Q_TAB] = ACTION_TAP_DANCE_DOUBLE(KC_Q, KC_TAB)
 };
 // For Tap Dance
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+      //TRABAJO
+        case HOMOLOGO:
+            if (record->event.pressed){
+                if (host_keyboard_led_state().caps_lock){
+                    SEND_STRING("`RESPALDO-INTELIGENCIA-RIESGO.COBRANZA.homologa_cuentas`()" SS_TAP(X_LEFT));
+                } else {
+                    SEND_STRING("`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()" SS_TAP(X_LEFT));
+                }
+            } else {
+                clear_keyboard();
+            }
+            break;
+
+        case CREATE_TB:
+            if (record->event.pressed){
+                if (host_keyboard_led_state().caps_lock) {
+                    SEND_STRING("create or replace table `RESPALDO-INTELIGENCIA-RIESGO.wsp_gjorquera.create` as (");
+                } else{
+                    SEND_STRING("CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB` AS (");
+                }
+            } else {
+                clear_keyboard();
+            }
+            break;
+    }
+    return true;
+}
+
 
  const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  #include "base_layout.h"
