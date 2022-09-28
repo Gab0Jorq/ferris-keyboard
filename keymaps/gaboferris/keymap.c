@@ -32,7 +32,8 @@ enum custom_keycodes {
   NAV,
   FN,
   HOMOLOGO, 
-  CREATE_TB
+  CREATE_TB,
+  SELECT
 };
 
 // For Tap Dance
@@ -69,9 +70,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case CREATE_TB:
             if (record->event.pressed){
                 if (host_keyboard_led_state().caps_lock) {
-                    SEND_STRING("create or replace table `RESPALDO-INTELIGENCIA-RIESGO.wsp_gjorquera.create` as (");
+                    SEND_STRING("create or replace table `RESPALDO-INTELIGENCIA-RIESGO.wsp_gjorquera.create`");
                 } else{
-                    SEND_STRING("CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB` AS (");
+                    SEND_STRING("CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB`");
+                }
+            } else {
+                clear_keyboard();
+            }
+            break;
+        
+        case SELECT:
+            if (record->event.pressed){
+                if (host_keyboard_led_state().caps_lock){
+                    SEND_STRING("select *" SS_TAP(X_ENT) "from");
+                } else {
+                    SEND_STRING("SELECT *" SS_TAP(X_ENT) "FROM");
                 }
             } else {
                 clear_keyboard();
