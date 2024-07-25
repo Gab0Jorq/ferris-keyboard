@@ -44,6 +44,17 @@ enum {
     TD_Q_TAB
 };
 
+enum combos {
+    FP_CAPS
+};
+
+// Combo
+const uint16_t PROGMEM fp_caps[] = {KC_F, KC_P, COMBO_END};
+
+combo_t key_combos[] = {
+    [FP_CAPS] = COMBO(fp_caps, KC_CAPS)
+};
+
 qk_tap_dance_action_t tap_dance_actions[] = {
     // Tap once for , and twice for ;
     [TD_COMM_SCLN] = ACTION_TAP_DANCE_DOUBLE(KC_COMM, KC_SCLN),
@@ -98,3 +109,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
  const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  #include "base_layout.h"
 };
+
+
+

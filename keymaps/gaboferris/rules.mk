@@ -20,6 +20,9 @@ TAP_DANCE_ENABLE = yes # enable double tap
 DYNAMIC_MACRO_ENABLE = yes # enable dynamic macro
 ## VIRTSER_ENABLE = yes # required for TX Bolt
 SPLIT_KEYBOARD = yes        # Use shared split_common code
+COMBO_ENABLE = yes     # Enable combos
+CAPS_WORD_ENABLE = yes # Enable
+
 
 #LTO_ENABLE = yes    #HACER MAS LIVIANO EL ARCHIVOO
 

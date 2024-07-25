@@ -37,6 +37,11 @@
 
 //#define USE_MATRIX_I2C
 
+// Caps world con Lshift y Rshift
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD 
+#define COMBO_COUNT 1  
+
+
 // Select hand configuration (ahora el master es la izquierda)
 
 //#define MASTER_LEFT
